@@ -1,0 +1,5 @@
+body {
+    min-width: 800px;
+    min-height: 800px;
+    overflow-y: auto;
+}
