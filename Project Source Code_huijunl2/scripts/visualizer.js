@@ -200,12 +200,12 @@ function drawCurve(svg, axis, data, color) {
 function buildSplitChart(rawData, durationInDays, minDate, config) {
     const {color, title} = config;
 
-    const data = processData(rawData);
+    const data = processData(rawData, durationInDays);
 
     const axis = {};
     const svg = d3.select("#charts").append("svg").attr("width", width).attr("height", height);
 
-    setupChart(svg, axis, data, minDate, title);
+    setupChart(svg, axis, minDate, title);
     drawDots(svg, axis, data, color);
     drawCurve(svg, axis, data, color);
     return svg;
