@@ -2,4 +2,21 @@ body {
     min-width: 800px;
     min-height: 800px;
     overflow-y: auto;
+    overflow-x: visible;
+}
+
+#panel {
+    display: none;
+}
+
+#start-panel, #stop-panel {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+#merge-charts {
+    display: flex;
+    align-items: center;
 }

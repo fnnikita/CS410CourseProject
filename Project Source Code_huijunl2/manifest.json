@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Extension for Analyzing Employee Satisfaction Trend",
+    "name": "CS410_CourseProject_Huijun_Lin",
     "version": "1.0",
     "icons": {
       "16": "images/icon-16.png",

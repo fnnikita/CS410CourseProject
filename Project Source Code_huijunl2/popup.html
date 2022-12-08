@@ -7,11 +7,31 @@
     <link rel="stylesheet" href="./popup.css" />
   </head>
   <body>
-    <div id="fetching-pages"> - </div>
+    <div id="message">Loading model...</div>
+    <div id="panel">
+      <div id="start-panel">
+        <select name="duration" id="duration">
+          <option value=30 selected>Last 30 days</option>
+          <option value=90>Last 90 days</option>
+          <option value=180>Last 180 days</option>
+          <option value=365>Last year</option>
+          <option value=730>Last 2 years</option>
+          <option value=-1>All</option>
+        </select>
+        <button id="start-fetching">Go!</button>
+      </div>
+      <div id="stop-panel">
+        <div>Current duration: Last <span id="selected-duration">-</span> days</div>
+        <div id="fetching-pages-container">Currently Fetching Page: <span id="fetching-pages"> - </span></div>
+        <div id="analyzing-pages-container">Currently Analyzing Page: <span id="analyzing-pages"> - </span></div>
+        <div id="merge-charts">Merge Charts<input id="merge-charts-slider" style="width: 30px" type="range" min="0" max="1" value="1"></div>
+        <button id="stop-fetching">Stop</button>
+      </div>
+    </div>
     <ul id="error-list"></ul>
-    <button id="stop-fetching">Stop Fetching</button>
+    <div id="charts-container"></div>
     <ol id='review-list'></ol>
-    <script src='./scripts/main.js' ></script>
+    <script src='./popup.js' ></script>
     <iframe sandbox="allow-scripts" id="sandbox-iframe" src="./sandbox.html" style="display: none;"></iframe>
   </body>
 </html>
